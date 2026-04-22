@@ -41,7 +41,7 @@ Le projet est structuré en 4 modules interdépendants :
 ### 2. Configuration de l'environnement
 ```powershell
 # Cloner le projet
-git clone [https://github.com/Hugo-Menial/testi.git](https://github.com/Hugo-Menial/testi.git)
+git clone [https://github.com/Hugo-Menial/Nexus.git](https://github.com/Hugo-Menial/Nexus.git)
 cd testi
 
 # Installer les dépendances
