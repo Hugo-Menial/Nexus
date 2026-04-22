@@ -1,4 +1,4 @@
-# 🛡️ NEXUS-SQL V1
+# 🛡️ NEXUS-SQL 
 > **Framework de Diagnostic de Robustesse pour Single Page Applications (SPA)**
 
 NexusSQL est une solution d'audit de sécurité automatisée conçue pour cartographier les API modernes et tester leur résilience face à des mutations de payloads avancées. Il combine l'exploration dynamique par navigateur et l'analyse différentielle de trafic.
