@@ -1,3 +1,6 @@
+Arrive prochainement
+Will come soon
+
 # 🛡️ NEXUS-SQL 
 > **Framework de Diagnostic de Robustesse pour Single Page Applications (SPA)**
 
@@ -42,10 +45,5 @@ cd testi
 # Installer les dépendances
 pip install httpx playwright streamlit pandas
 
-
-
-
-Arrive prochainement
-Will come soon
 # Initialiser le moteur de rendu
 playwright install chromium
