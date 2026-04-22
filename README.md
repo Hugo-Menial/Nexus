@@ -1,4 +1,3 @@
-import os
 
 # Contenu du README au format Markdown avec optimisations visuelles GitHub
 md_content = """# 🛡️ NEXUS-SQL V2.0
