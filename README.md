@@ -1,49 +1,46 @@
+# 🛡️ NEXUS-SQL V1
+> **Framework de Diagnostic de Robustesse pour Single Page Applications (SPA)**
 
-# Contenu du README au format Markdown avec optimisations visuelles GitHub
-md_content = """# 🛡️ NEXUS-SQL V2.0
-> **Framework Avancé de Cartographie SPA & Audit de Robustesse différentielle.**
-
-![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
-![Python Version](https://img.shields.io/badge/python-3.14-green.svg)
-![Engine](https://img.shields.io/badge/engine-Async_HTTPX-orange.svg)
-![Security](https://img.shields.io/badge/audit-WAF_Bypass-red.svg)
+NexusSQL est une solution d'audit de sécurité automatisée conçue pour cartographier les API modernes et tester leur résilience face à des mutations de payloads avancées. Il combine l'exploration dynamique par navigateur et l'analyse différentielle de trafic.
 
 ---
 
-## 📖 Présentation
-**NexusSQL** est un outil de diagnostic de sécurité conçu pour les architectures modernes (Single Page Applications). Contrairement aux outils traditionnels, il se concentre sur l'**analyse différentielle** : il mesure comment un serveur réagit à des mutations complexes pour identifier des failles logiques ou des faiblesses de filtrage.
+## 📊 Aperçu du Framework
+NexusSQL n'est pas un simple scanner de vulnérabilités. C'est un outil de **QA Sécurité** qui vérifie la solidité des filtres applicatifs via :
+- **Discovery** : Cartographie des endpoints via Playwright.
+- **Mutation** : Polymorphisme de payloads (Double encoding, Fragmentation SQL).
+- **Stealth** : Simulation de comportement humain (Jitter, Cookies, Fingerprinting).
+- **Reporting** : Dashboard de conformité temps-réel avec Streamlit.
 
 ---
 
-## 🚀 Fonctionnalités Clés
+## 🛠️ Architecture du Projet
 
-### 🔍 1. SPA Deep Discovery
-Utilise **Playwright** pour simuler une navigation humaine, capturer les appels API asynchrones et cartographier les endpoints JSON souvent invisibles pour les scanners classiques.
+Le projet est structuré en 4 modules interdépendants :
 
-### 🎭 2. Moteur de Mutation Polymorphique
-Le `StringMutator` génère des variantes de payloads capables de contourner les WAF (Web Application Firewalls) :
-* **Double Encodage URL** (`%2527`)
-* **Fragmentation SQL** (Insertion de commentaires `/**/` stratégiques)
-* **Polymorphisme de Casse** (Altération majuscule/minuscule intelligente)
-
-### 🕵️ 3. Fuzzing Furtif (Stealth)
-* **Jitter Adaptatif** : Distribution de Poisson pour espacer les requêtes et éviter le bannissement IP.
-* **Session Persistence** : Import de cookies JSON pour auditer les zones authentifiées.
-* **Fingerprint Mimicry** : Simulation de headers de navigateurs modernes (Chrome 124+).
-
-### 📊 4. Dashboard de Conformité
-Interface **Streamlit** offrant :
-* Un résumé visuel de la résilience du site.
-* Une matrice détaillée de chaque test effectué.
-* Un export des données pour les rapports d'audit.
+| Fichier | Rôle |
+| :--- | :--- |
+| `spa_mapper.py` | Crawling dynamique et extraction des routes d'API JSON. |
+| `string_mutator.py` | Moteur de polymorphisme (génération des variantes de payloads). |
+| `robustness_engine.py` | Moteur d'audit asynchrone (gestion du Jitter et des sessions). |
+| `dashboard.py` | Interface de visualisation et rapport de conformité. |
 
 ---
 
-## 🛠️ Installation & Utilisation
+## ⚙️ Installation
 
-### Installation
-```bash
-git clone [https://github.com/votre-repo/nexus-sql.git](https://github.com/votre-repo/nexus-sql.git)
-cd nexus-sql
-pip install -r requirements.txt
-playwright install
+### 1. Prérequis
+* Python 3.14+
+* Google Chrome (pour Playwright)
+
+### 2. Configuration de l'environnement
+```powershell
+# Cloner le projet
+git clone [https://github.com/votre-repo/testi.git](https://github.com/votre-repo/testi.git)
+cd testi
+
+# Installer les dépendances
+pip install httpx playwright streamlit pandas
+
+# Initialiser le moteur de rendu
+playwright install chromium
