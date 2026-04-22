@@ -42,5 +42,10 @@ cd testi
 # Installer les dépendances
 pip install httpx playwright streamlit pandas
 
+
+
+
+Arrive prochainement
+Will come soon
 # Initialiser le moteur de rendu
 playwright install chromium
