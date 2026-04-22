@@ -49,3 +49,18 @@ pip install httpx playwright streamlit pandas
 
 # Initialiser le moteur de rendu
 playwright install chromium
+```
+## 🚀 EXEMPLES DE DÉPLOIEMENT
+
+### 🔹 Scan Standard (Vitesse)
+```powershell
+.\run_robustness.bat --map api_map.json --base-url [https://target.fr](https://target.fr)
+```
+Scan Expert (Haute Discrétion & Session)
+```powershell
+.\run_robustness.bat --map api_map.json --base-url [https://target.fr](https://target.fr) --cookies cookies.json --jitter --jitter-min 3.0 --jitter-max 6.0
+```
+🧩 Exemple (Haute Discrétion & Session)
+```powershell
+.\run_robustness.bat --map api_map.json --base-url https://localhost --cookies cookies.json --jitter --jitter-min 3.0 --jitter-max 6.0
+```
